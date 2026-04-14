@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="一个可直接发布到 GitHub Pages 的个人主页模板。"
+  />
+  <title>你的名字 | GitHub Pages Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">你的名字</a>
+    <nav class="site-nav">
+      <a href="#about">关于我</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">GITHUB PAGES HOMEPAGE</p>
+        <h1>
+          你好，我是
+          <span class="accent">你的名字</span>
+        </h1>
+        <p class="hero-text">
+          我正在用代码、产品思维和持续交付，构建更清晰、更好用的数字体验。
+          这里会放我的项目、技能、正在做的事，以及你可以联系到我的方式。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/你的GitHub用户名" target="_blank" rel="noreferrer">
+            查看 GitHub
+          </a>
+          <a class="button button-secondary" href="#contact">联系我</a>
+        </div>
+        <div class="signal-row">
+          <div class="signal-card">
+            <span class="signal-label">当前身份</span>
+            <strong id="role-text">前端开发 / 学习者</strong>
+          </div>
+          <div class="signal-card">
+            <span class="signal-label">所在方向</span>
+            <strong>Web · AI · 产品落地</strong>
+          </div>
+        </div>
+      </div>
+
+      <aside class="profile-panel reveal">
+        <div class="profile-glow" aria-hidden="true"></div>
+        <div class="avatar">你</div>
+        <p class="panel-kicker">OPEN TO BUILD</p>
+        <h2>把你的 GitHub 主页变成个人名片</h2>
+        <p>
+          这个模板已经适配 GitHub Pages。你只需要替换名字、链接和介绍，就可以直接发布。
+        </p>
+        <ul class="mini-list">
+          <li>单页静态站点</li>
+          <li>响应式布局</li>
+          <li>适合个人展示和项目引流</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">ABOUT</p>
+        <h2>我是谁</h2>
+      </div>
+      <div class="about-layout">
+        <article class="content-card">
+          <p>
+            我对软件开发、AI 应用和产品实现很感兴趣，擅长把想法整理成可以上线的页面、功能和流程。
+            我喜欢做能直接交付结果的项目，而不只是停留在概念阶段。
+          </p>
+          <p>
+            如果你正在找一个可以快速搭建 Demo、整理产品页面、展示项目成果的 GitHub 主页，这个站点就是一个很好的起点。
+          </p>
+        </article>
+        <div class="pill-grid">
+          <span>HTML / CSS / JavaScript</span>
+          <span>React / Next.js</span>
+          <span>GitHub Pages</span>
+          <span>UI / UX</span>
+          <span>Prompt Engineering</span>
+          <span>Project Shipping</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">PROJECTS</p>
+        <h2>精选项目</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="project-index">01</span>
+          <h3>项目名称 A</h3>
+          <p>
+            在这里写一个你做过的项目，比如个人博客、管理后台、AI 工具页或者课程作品。
+          </p>
+          <a href="https://github.com/你的GitHub用户名" target="_blank" rel="noreferrer">查看源码</a>
+        </article>
+        <article class="project-card">
+          <span class="project-index">02</span>
+          <h3>项目名称 B</h3>
+          <p>
+            说明这个项目解决了什么问题，用了什么技术，以及你在里面负责了什么。
+          </p>
+          <a href="https://github.com/你的GitHub用户名" target="_blank" rel="noreferrer">查看源码</a>
+        </article>
+        <article class="project-card">
+          <span class="project-index">03</span>
+          <h3>项目名称 C</h3>
+          <p>
+            如果你还没有真实项目，可以先放“正在开发中”的内容，后面再逐步补齐。
+          </p>
+          <a href="https://github.com/你的GitHub用户名" target="_blank" rel="noreferrer">查看源码</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">NOW</p>
+        <h2>最近在做什么</h2>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <strong>搭建个人品牌页面</strong>
+            <p>整理作品、履历和联系方式，让别人更快了解你。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <strong>积累可展示项目</strong>
+            <p>把课程作业、练手项目、工作内容转成可分享的作品集。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <strong>持续更新 GitHub</strong>
+            <p>让主页不只是一个静态页面，而是你长期迭代的公开窗口。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">CONTACT</p>
+        <h2>联系我</h2>
+      </div>
+      <div class="contact-card">
+        <p>
+          如果你想交流项目、技术学习或者合作机会，可以通过下面这些方式找到我。
+        </p>
+        <div class="contact-links">
+          <a href="mailto:you@example.com">you@example.com</a>
+          <a href="https://github.com/你的GitHub用户名" target="_blank" rel="noreferrer">@你的GitHub用户名</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 你的名字. Built for GitHub Pages.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
