@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Single-page portfolio for Sinlair, featuring AI agent projects, workflow experiments, and public links."
+    content="A single-screen portfolio for Sinlair, featuring AI agent projects, workflow experiments, and public links."
   >
   <meta name="theme-color" content="#eef6fb">
   <title>Sinlair | Portfolio</title>
@@ -15,9 +15,6 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
     rel="stylesheet"
   >
-  <script>
-    document.documentElement.classList.add("js");
-  </script>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -29,241 +26,118 @@
 
     <header class="site-header">
       <a class="brand" href="#top">SINLAIR</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="#about">About</a>
-        <a href="#focus">Focus</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav class="header-links" aria-label="Primary links">
+        <a href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">ReAgent</a>
+        <a href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">TravelAgent</a>
+        <a href="https://github.com/Sinlair/Sinlair.github.io" target="_blank" rel="noreferrer">Source</a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero reveal">
-        <div class="hero-copy">
-          <p class="eyebrow">GitHub Pages / Student / AI Agent Builder</p>
-          <h1>
-            One page for
-            <span
-              class="hero-rotator"
-              data-words="agent runtimes,travel workflows,public repos,prototype products"
-            >agent runtimes</span>
-            and public work.
-          </h1>
-          <p class="hero-text">
-            I build in public on GitHub as <strong>Sinlair</strong>. This site keeps
-            everything on a single page: background, current direction, featured
-            projects, and the public links that matter.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">
-              GitHub Profile
-            </a>
-            <a class="button button-secondary" href="#projects">Featured Projects</a>
-          </div>
-          <ul class="hero-metrics" aria-label="Highlights">
-            <li>
-              <strong>1</strong>
-              <span>Single-page portfolio</span>
-            </li>
-            <li>
-              <strong>6</strong>
-              <span>Public repositories</span>
-            </li>
-            <li>
-              <strong>Now</strong>
-              <span>Focused on AI agents</span>
-            </li>
-          </ul>
+    <main class="dashboard" id="top">
+      <section class="panel hero-panel">
+        <p class="eyebrow">Student / AI Agent Builder / GitHub Pages</p>
+        <h1>
+          Everything visible in
+          <span
+            class="hero-rotator"
+            data-words="one screen,one frame,one glance,one dashboard"
+          >one screen</span>.
+        </h1>
+        <p class="hero-text">
+          I build in public as <strong>Sinlair</strong>. Identity, focus, featured
+          repositories, and public links stay inside a single desktop view.
+        </p>
+        <div class="action-row">
+          <a class="button button-primary" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">
+            Open GitHub
+          </a>
         </div>
+      </section>
 
-        <aside class="hero-card">
-          <div class="status-pill">
-            <span class="dot"></span>
-            Public profile under Sinlair
-          </div>
-          <img
-            class="avatar"
-            src="https://avatars.githubusercontent.com/u/93720173?v=4"
-            alt="Sinlair avatar"
-          >
+      <section class="panel profile-panel">
+        <div class="status-pill">
+          <span class="dot"></span>
+          Public profile under Sinlair
+        </div>
+        <img
+          class="avatar"
+          src="https://avatars.githubusercontent.com/u/93720173?v=4"
+          alt="Sinlair avatar"
+        >
+        <div class="profile-copy">
           <h2>Sinlair</h2>
-          <p class="profile-note">
-            Student builder focused on AI agents, workflow design, and turning
-            technical experiments into repositories that are easier to inspect.
+          <p>
+            Student builder focused on AI agents, workflow design, and clearer public
+            presentation for technical work.
           </p>
-          <div class="mini-panel">
-            <span class="mini-label">Current focus</span>
-            <p>
-              Runtime orchestration, workflow-shaped products, and cleaner public
-              presentation for code that would otherwise stay buried inside repos.
-            </p>
+        </div>
+        <div class="mini-note">
+          <span class="mini-label">Current focus</span>
+          <p>Runtime orchestration. Workflow products. Cleaner repos.</p>
+        </div>
+      </section>
+
+      <section class="panel about-panel">
+        <p class="eyebrow">About</p>
+        <h3>How I work</h3>
+        <p>
+          I use GitHub as notebook, lab bench, and public portfolio, with an emphasis
+          on making projects readable from the outside.
+        </p>
+        <ul class="compact-list">
+          <li>Readable repositories over raw activity</li>
+          <li>Workflow thinking over one-shot demos</li>
+          <li>Public framing as part of the build quality</li>
+        </ul>
+      </section>
+
+      <section class="panel projects-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h3>Featured repositories</h3>
           </div>
-        </aside>
-      </section>
+          <a class="text-link" href="https://github.com/Sinlair?tab=repositories" target="_blank" rel="noreferrer">
+            View all
+          </a>
+        </div>
 
-      <section class="section reveal" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>GitHub as notebook, lab bench, and public portfolio.</h2>
-        </div>
-        <div class="split-layout">
-          <article class="panel panel-accent">
-            <h3>How I use it</h3>
+        <div class="project-list">
+          <article class="mini-project">
+            <div class="project-topline">01 / Runtime</div>
+            <h4>ReAgent</h4>
             <p>
-              I use GitHub to make technical work legible. The goal is not just to
-              store code, but to surface projects that can be read, reviewed, and
-              understood from the outside.
-            </p>
-          </article>
-          <article class="panel">
-            <h3>Why one page</h3>
-            <p>
-              This site is intentionally compact again. Instead of sending people
-              across multiple pages, it keeps the key context in one scroll.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reveal" id="focus">
-        <div class="section-heading">
-          <p class="eyebrow">Focus</p>
-          <h2>The themes that currently define the work.</h2>
-        </div>
-        <div class="fact-grid">
-          <article class="fact-card">
-            <span class="mini-label">01</span>
-            <h3>AI agents</h3>
-            <p>
-              I care about orchestration, state visibility, tool use, and what makes
-              agent systems durable beyond a single run.
-            </p>
-          </article>
-          <article class="fact-card">
-            <span class="mini-label">02</span>
-            <h3>Workflow products</h3>
-            <p>
-              I prefer systems where the user task unfolds across multiple steps,
-              rather than one prompt and one response.
-            </p>
-          </article>
-          <article class="fact-card">
-            <span class="mini-label">03</span>
-            <h3>Open-source study</h3>
-            <p>
-              Comparing public projects helps sharpen architecture choices and pushes
-              my own repositories toward stronger seams.
-            </p>
-          </article>
-          <article class="fact-card">
-            <span class="mini-label">04</span>
-            <h3>Presentation quality</h3>
-            <p>
-              I want public work to look intentional, not dumped. This page is part
-              of that same standard.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reveal" id="projects">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>The repositories doing most of the work right now.</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="card-index">01</div>
-            <h3>ReAgent</h3>
-            <p>
-              A standalone local-first runtime and CLI for long-running research
-              workflows, centered on durable outputs, visible task state, and
-              inspectable runtime seams.
+              Local-first runtime for long-running research workflows.
             </p>
             <div class="tags">
               <span>Node.js</span>
-              <span>TypeScript</span>
               <span>CLI</span>
-              <span>Research runtime</span>
             </div>
-            <a class="project-link" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
           </article>
 
-          <article class="project-card accent-card">
-            <div class="card-index">02</div>
-            <h3>TravelAgent</h3>
+          <article class="mini-project">
+            <div class="project-topline">02 / Product</div>
+            <h4>TravelAgent</h4>
             <p>
-              A full-stack travel planning workspace that converts free-form input
-              into grounded itineraries with specialist routing, Amap enrichment, and
-              shareable outputs.
+              Travel planning workspace with routing and grounded itineraries.
             </p>
             <div class="tags">
               <span>Java 21</span>
-              <span>Spring Boot</span>
               <span>Vue 3</span>
-              <span>Amap</span>
             </div>
-            <a class="project-link" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">
-              Open repository
-            </a>
           </article>
         </div>
       </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Direction</p>
-          <h2>What ties the repositories together.</h2>
-        </div>
-        <div class="split-layout">
-          <article class="panel">
-            <h3>Technical bar</h3>
-            <ul class="bullet-list">
-              <li>It should show a real system or workflow, not only a code fragment</li>
-              <li>There should be enough structure to inspect how it is built</li>
-              <li>The result should be reusable after the first run</li>
-            </ul>
-          </article>
-          <article class="panel">
-            <h3>Presentation bar</h3>
-            <ul class="bullet-list">
-              <li>The project should be explainable in product terms</li>
-              <li>Public framing should help someone understand the work quickly</li>
-              <li>The repository should signal direction, not just activity</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reveal" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>The main public entry points.</h2>
-        </div>
-        <div class="contact-panel">
-          <div>
-            <p>
-              The clearest way to follow the work is through GitHub and the featured
-              repositories. This page stays lightweight and keeps the public links in
-              one place.
-            </p>
-          </div>
-          <div class="link-stack">
-            <a href="https://github.com/Sinlair" target="_blank" rel="noreferrer">
-              GitHub / Sinlair
-            </a>
-            <a href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">
-              Featured Repo / ReAgent
-            </a>
-            <a href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">
-              Featured Repo / TravelAgent
-            </a>
-            <a href="https://github.com/Sinlair/Sinlair.github.io" target="_blank" rel="noreferrer">
-              Source / Sinlair.github.io
-            </a>
-          </div>
+      <section class="panel links-panel">
+        <p class="eyebrow">Links</p>
+        <h3>Public entry points</h3>
+        <div class="link-stack">
+          <a href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub / Sinlair</a>
+          <a href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">Repository / ReAgent</a>
+          <a href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">Repository / TravelAgent</a>
+          <a href="https://github.com/Sinlair/Sinlair.github.io" target="_blank" rel="noreferrer">Source / This page</a>
         </div>
       </section>
     </main>
