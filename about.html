@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="About page for Sinlair, covering background, working direction, and the way projects are framed."
+    content="Sinlair 的关于页面，介绍个人方向、项目判断标准和公开表达方式。"
   >
   <meta name="theme-color" content="#eef6fb">
-  <title>Sinlair | About</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  >
+  <title>Sinlair | 关于</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -27,11 +21,11 @@
     <header class="site-header">
       <a class="brand" href="./index.html">SINLAIR</a>
       <div class="header-rail">
-        <nav class="site-nav" aria-label="Primary">
-          <a href="./index.html" data-nav="home">Home</a>
-          <a href="./about.html" data-nav="about">About</a>
-          <a href="./projects.html" data-nav="projects">Projects</a>
-          <a href="./contact.html" data-nav="contact">Contact</a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="./index.html" data-nav="home">首页</a>
+          <a href="./about.html" data-nav="about">关于</a>
+          <a href="./projects.html" data-nav="projects">项目</a>
+          <a href="./contact.html" data-nav="contact">联系</a>
         </nav>
         <a class="header-cta" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
       </div>
@@ -39,27 +33,27 @@
 
     <main class="dashboard dashboard-about">
       <section class="panel intro-panel">
-        <p class="eyebrow">About</p>
+        <p class="eyebrow">关于</p>
         <h1>
-          How I frame
-          <span class="accent-word">public work</span>.
+          我如何组织
+          <span class="accent-word">公开作品</span>
         </h1>
         <p class="hero-text">
-          I work under the public name <strong>Sinlair</strong>. The common thread in
-          my repositories is building systems whose process and intent stay visible.
+          我以 <strong>Sinlair</strong> 这个名字对外公开。我的仓库有一个共同点：
+          不只是做功能，而是尽量把过程、意图和结构都保留下来。
         </p>
         <div class="fact-strip">
           <article class="fact-pill">
-            <span class="detail-label">Identity</span>
-            <strong>Student builder using Sinlair publicly</strong>
+            <span class="detail-label">身份</span>
+            <strong>以 Sinlair 公开活动的学生开发者</strong>
           </article>
           <article class="fact-pill">
-            <span class="detail-label">Bias</span>
-            <strong>Workflow products over one-shot demos</strong>
+            <span class="detail-label">偏好</span>
+            <strong>更看重工作流产品，而不是一次性 Demo</strong>
           </article>
           <article class="fact-pill">
-            <span class="detail-label">Standard</span>
-            <strong>Readable systems with visible process</strong>
+            <span class="detail-label">标准</span>
+            <strong>系统要可读，过程要可见</strong>
           </article>
         </div>
       </section>
@@ -67,49 +61,48 @@
       <section class="panel side-panel">
         <div class="status-pill">
           <span class="dot"></span>
-          Direction snapshot
+          当前方向
         </div>
-        <h3>Working priorities</h3>
+        <h3>我优先做什么</h3>
         <ul class="compact-list">
-          <li>Agent systems that keep state visible</li>
-          <li>Workflow products instead of one-shot answers</li>
-          <li>Projects that can be read by others quickly</li>
+          <li>状态可见的 Agent 系统</li>
+          <li>不是只给答案，而是组织完整工作流</li>
+          <li>让别人能快速读懂的项目表达</li>
         </ul>
       </section>
 
       <section class="panel detail-panel">
-        <p class="eyebrow">Method</p>
-        <h3>How I judge project quality</h3>
+        <p class="eyebrow">方法</p>
+        <h3>我怎么判断项目质量</h3>
         <ul class="compact-list">
-          <li>The repository should explain what problem it is solving</li>
-          <li>The technical structure should be inspectable, not opaque</li>
-          <li>The output should survive beyond one single run or demo</li>
+          <li>仓库要能说明它到底在解决什么问题</li>
+          <li>技术结构要能被检查，而不是黑盒一团</li>
+          <li>输出结果要能留存，不只是一轮演示</li>
         </ul>
       </section>
 
       <section class="panel detail-panel">
-        <p class="eyebrow">Focus</p>
-        <h3>What keeps showing up</h3>
+        <p class="eyebrow">关注点</p>
+        <h3>反复出现的主题</h3>
         <ul class="compact-list">
-          <li>Runtime orchestration</li>
-          <li>Specialist routing and task decomposition</li>
-          <li>Product-shaped interfaces around model behavior</li>
+          <li>运行时编排</li>
+          <li>专家路由与任务拆解</li>
+          <li>围绕模型能力做产品化界面</li>
         </ul>
       </section>
 
       <section class="panel detail-panel">
-        <p class="eyebrow">Public standard</p>
-        <h3>Why this site exists</h3>
+        <p class="eyebrow">公开标准</p>
+        <h3>为什么要做这个站</h3>
         <p>
-          This portfolio is part of the work itself. It gives the repositories
-          structure, context, and a public-facing layer that is easier to scan than
-          dropping someone straight into source code.
+          这个站点本身就是项目工作的一部分。它给仓库补上结构、上下文和对外入口，
+          比直接把别人丢进源码里更容易理解。
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span class="currentYear"></span> Sinlair. Built for GitHub Pages.</p>
+      <p>&copy; <span class="currentYear"></span> Sinlair。基于 GitHub Pages 构建。</p>
     </footer>
   </div>
 
