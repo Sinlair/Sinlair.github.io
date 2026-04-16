@@ -668,6 +668,8 @@ body[data-page="contact"] .intro-panel h1 {
 }
 
 .link-stack a {
+  position: relative;
+  overflow: hidden;
   padding: 0.72rem 0.88rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -882,5 +884,24 @@ body[data-page="contact"] .intro-panel h1 {
   .panel,
   .panel.is-hovered {
     transform: none;
+  }
+}
+
+/* ============================================================
+   Ripple click effect
+   ============================================================ */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-out 580ms ease-out forwards;
+  background: rgba(255, 255, 255, 0.36);
+  pointer-events: none;
+}
+
+@keyframes ripple-out {
+  to {
+    transform: scale(4);
+    opacity: 0;
   }
 }
