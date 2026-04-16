@@ -7,17 +7,13 @@
     name="description"
     content="Sinlair 的项目页，展示重点项目的作用、技术栈和核心亮点。"
   >
-  <meta name="theme-color" content="#f4efe6">
+  <meta name="theme-color" content="#f5f1e8">
   <title>Sinlair | 项目</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body data-page="projects">
   <div class="page-shell">
-    <div class="ambient ambient-left" aria-hidden="true"></div>
-    <div class="ambient ambient-right" aria-hidden="true"></div>
-    <div class="grid-overlay" aria-hidden="true"></div>
-
     <header class="site-header">
       <a class="brand" href="./index.html">SINLAIR</a>
       <div class="header-rail">
@@ -27,99 +23,79 @@
           <a href="./projects.html" data-nav="projects">项目</a>
           <a href="./contact.html" data-nav="contact">联系</a>
         </nav>
-        <a class="header-cta" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="header-link" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </header>
 
-    <main class="dashboard">
-      <section class="panel intro-panel">
-        <p class="eyebrow">项目</p>
-        <h1>
-          先把项目
-          <span class="accent-word">说清楚</span>
-          再带你进入代码
-        </h1>
-        <p class="hero-text">
-          我希望项目页先解释“它在做什么、为什么值得继续读”，而不是一上来把人推进仓库。
+    <main class="page-main">
+      <section class="section section-narrow reveal">
+        <p class="section-kicker">Projects</p>
+        <h1>项目页先解释作用和结构，再把人带进仓库。</h1>
+        <p class="page-intro">
+          我更喜欢先把“这个项目在做什么”说清楚。只有目标、边界和亮点足够明确，
+          源码阅读才会真正有上下文。
         </p>
       </section>
 
-      <section class="panel side-panel">
-        <div class="status-pill">
-          <span class="dot"></span>
-          阅读方式
+      <section class="section reveal">
+        <div class="project-stack">
+          <article class="content-card project-sheet">
+            <div class="sheet-head">
+              <div>
+                <div class="card-topline">01 / Runtime</div>
+                <h2>ReAgent</h2>
+              </div>
+              <a class="section-link" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">打开仓库</a>
+            </div>
+            <p class="sheet-lead">
+              一个本地优先的研究工作流运行时与 CLI，用来承载长生命周期任务、记忆和可复用输出。
+            </p>
+            <div class="sheet-grid">
+              <div>
+                <span class="meta-label">技术栈</span>
+                <p>Node.js、TypeScript、Prisma、CLI runtime、workspace memory。</p>
+              </div>
+              <div>
+                <span class="meta-label">当前状态</span>
+                <p>目前更偏基础设施与运行时能力建设，适合展示系统设计与编排思路。</p>
+              </div>
+            </div>
+            <ul class="plain-list">
+              <li>强调状态可见，不把流程藏进黑盒。</li>
+              <li>输出结果可持续保存，结束后仍能被再次利用。</li>
+              <li>把 research、memory 和 runtime 放进统一运行时。</li>
+            </ul>
+          </article>
+
+          <article class="content-card project-sheet">
+            <div class="sheet-head">
+              <div>
+                <div class="card-topline">02 / Product</div>
+                <h2>TravelAgent</h2>
+              </div>
+              <a class="section-link" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">打开仓库</a>
+            </div>
+            <p class="sheet-lead">
+              一个围绕旅行规划场景构建的多步骤工作台，把自由输入转成更接近真实可执行的行程方案。
+            </p>
+            <div class="sheet-grid">
+              <div>
+                <span class="meta-label">技术栈</span>
+                <p>Java 21、Spring Boot、Spring AI、Vue 3、Vite、SQLite、Amap。</p>
+              </div>
+              <div>
+                <span class="meta-label">当前状态</span>
+                <p>目前更偏产品化表达，适合展示从模型能力到界面工作流的闭环。</p>
+              </div>
+            </div>
+            <ul class="plain-list">
+              <li>把不同专家能力组织成路由式工作流。</li>
+              <li>通过 Amap 做 grounded enrichment，减少纯文本规划的漂浮感。</li>
+              <li>界面和执行链路都更接近真实产品，而不是技术演示。</li>
+            </ul>
+          </article>
         </div>
-        <h3>建议按这个顺序看</h3>
-        <ul class="compact-list">
-          <li>先看作用，判断它解决了什么问题。</li>
-          <li>再看技术栈，理解实现边界和系统形态。</li>
-          <li>最后看亮点，判断完成度和独特性。</li>
-        </ul>
       </section>
-
-      <article class="panel project-detail">
-        <div class="project-detail-head">
-          <div>
-            <p class="eyebrow">01 / Runtime</p>
-            <h3>ReAgent</h3>
-          </div>
-          <a class="text-link" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">打开仓库</a>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">作用</span>
-          <p>
-            一个本地优先的研究工作流运行时与 CLI，用来承载长生命周期任务、记忆和可复用输出。
-          </p>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">技术栈</span>
-          <p>Node.js、TypeScript、Prisma、CLI runtime、workspace memory。</p>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">项目亮点</span>
-          <ul class="compact-list">
-            <li>强调状态可见，不把流程藏进黑盒。</li>
-            <li>输出结果可持续保存，结束后仍能被再次利用。</li>
-            <li>把 research、memory 和 runtime 放进统一运行时。</li>
-          </ul>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">当前状态</span>
-          <p>目前更偏基础设施与运行时能力建设，适合展示系统设计与编排思路。</p>
-        </div>
-      </article>
-
-      <article class="panel project-detail">
-        <div class="project-detail-head">
-          <div>
-            <p class="eyebrow">02 / Product</p>
-            <h3>TravelAgent</h3>
-          </div>
-          <a class="text-link" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">打开仓库</a>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">作用</span>
-          <p>
-            围绕旅行规划场景构建的多步骤工作台，把自由输入转成更接近真实可执行的行程方案。
-          </p>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">技术栈</span>
-          <p>Java 21、Spring Boot、Spring AI、Vue 3、Vite、SQLite、Amap。</p>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">项目亮点</span>
-          <ul class="compact-list">
-            <li>把不同专家能力组织成路由式工作流。</li>
-            <li>通过 Amap 做 grounded enrichment，减少纯文本规划的漂浮感。</li>
-            <li>界面和执行链路都更接近真实产品，而不是技术演示。</li>
-          </ul>
-        </div>
-        <div class="detail-block">
-          <span class="detail-label">当前状态</span>
-          <p>目前更偏产品化表达，适合展示从模型能力到界面工作流的闭环。</p>
-        </div>
-      </article>
     </main>
 
     <footer class="site-footer">

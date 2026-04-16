@@ -7,17 +7,13 @@
     name="description"
     content="Sinlair 的关于页，介绍个人方向、项目判断标准和公开表达方式。"
   >
-  <meta name="theme-color" content="#f4efe6">
+  <meta name="theme-color" content="#f5f1e8">
   <title>Sinlair | 关于</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body data-page="about">
   <div class="page-shell">
-    <div class="ambient ambient-left" aria-hidden="true"></div>
-    <div class="ambient ambient-right" aria-hidden="true"></div>
-    <div class="grid-overlay" aria-hidden="true"></div>
-
     <header class="site-header">
       <a class="brand" href="./index.html">SINLAIR</a>
       <div class="header-rail">
@@ -27,78 +23,72 @@
           <a href="./projects.html" data-nav="projects">项目</a>
           <a href="./contact.html" data-nav="contact">联系</a>
         </nav>
-        <a class="header-cta" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="header-link" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </header>
 
-    <main class="dashboard">
-      <section class="panel intro-panel">
-        <p class="eyebrow">关于</p>
-        <h1>
-          我怎样把
-          <span class="accent-word">公开作品</span>
-          组织成一套长期资产
-        </h1>
-        <p class="hero-text">
-          我以 <strong>Sinlair</strong> 这个名字对外公开。我的仓库有一个共同点：
-          不只做功能，也尽量把过程、意图和结构保留下来。
+    <main class="page-main">
+      <section class="section section-narrow reveal">
+        <p class="section-kicker">About</p>
+        <h1>我更想做的是长期可积累的系统，而不是一次性的演示页面。</h1>
+        <p class="page-intro">
+          我以 <strong>Sinlair</strong> 这个名字对外公开。我的项目通常围绕同一类问题展开：
+          如何把模型能力、工具调用和用户界面组织成一条可解释、可复用的工作流。
         </p>
-        <div class="fact-strip">
-          <article class="fact-pill">
-            <span class="detail-label">身份</span>
-            <strong>以 Sinlair 公开活动的学生开发者</strong>
+      </section>
+
+      <section class="section reveal">
+        <div class="card-grid card-grid-two">
+          <article class="content-card">
+            <span class="meta-label">我在做什么</span>
+            <h2>状态可见、边界清晰的 Agent 系统</h2>
+            <p>
+              我对“系统怎么运行”比“它跑出了什么结果”更感兴趣。一个项目如果不能解释自己的结构，
+              就很难变成真正可复用的长期资产。
+            </p>
           </article>
-          <article class="fact-pill">
-            <span class="detail-label">偏好</span>
-            <strong>更看重工作流产品，而不是一次性 Demo</strong>
-          </article>
-          <article class="fact-pill">
-            <span class="detail-label">标准</span>
-            <strong>系统要可读，过程要可见，输出要可留存</strong>
+          <article class="content-card">
+            <span class="meta-label">我怎么公开它们</span>
+            <h2>先讲作用，再讲实现</h2>
+            <p>
+              我希望读者先理解一个项目解决什么问题，再决定是否进入代码层面。
+              这也是我做主页、项目页和仓库说明时采用的共同标准。
+            </p>
           </article>
         </div>
       </section>
 
-      <section class="panel side-panel">
-        <div class="status-pill">
-          <span class="dot"></span>
-          当前关注
+      <section class="section reveal">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Criteria</p>
+            <h2>我通常用这三个问题判断一个项目是否成立。</h2>
+          </div>
         </div>
-        <h3>我优先做什么</h3>
-        <ul class="compact-list">
-          <li>状态可见、边界清晰的 Agent 系统。</li>
-          <li>不只生成答案，而是组织完整任务流的产品。</li>
-          <li>让别人能快速读懂的项目表达方式。</li>
-        </ul>
-      </section>
 
-      <section class="panel detail-panel">
-        <p class="eyebrow">方法</p>
-        <h3>我怎么判断一个项目是否成立</h3>
-        <ul class="compact-list">
-          <li>仓库需要先说清楚它到底在解决什么问题。</li>
-          <li>技术结构要能被检查，而不是只看到一层结果。</li>
-          <li>输出结果要能沉淀下来，而不是只做一次演示。</li>
-        </ul>
-      </section>
-
-      <section class="panel detail-panel">
-        <p class="eyebrow">关注点</p>
-        <h3>反复出现的主题</h3>
-        <ul class="compact-list">
-          <li>运行时编排与任务状态管理。</li>
-          <li>多角色路由与复杂任务拆解。</li>
-          <li>围绕模型能力做更接近产品的界面。</li>
-        </ul>
-      </section>
-
-      <section class="panel detail-panel">
-        <p class="eyebrow">公开标准</p>
-        <h3>为什么要做这个站点</h3>
-        <p>
-          这个站点本身就是项目工作的一部分。它给仓库补上结构、上下文和对外入口，
-          比直接把别人丢进源代码里更容易建立理解，也更接近真正的产品展示方式。
-        </p>
+        <div class="stack-list">
+          <article class="stack-item">
+            <span class="stack-index">01</span>
+            <div>
+              <h3>它有没有清楚地定义要解决的问题？</h3>
+              <p>如果问题定义不清楚，后续的结构和实现通常也会失去方向。</p>
+            </div>
+          </article>
+          <article class="stack-item">
+            <span class="stack-index">02</span>
+            <div>
+              <h3>它的系统边界是否能被读出来？</h3>
+              <p>我更喜欢能解释任务流、状态和工具调用关系的项目，而不是只给结果。</p>
+            </div>
+          </article>
+          <article class="stack-item">
+            <span class="stack-index">03</span>
+            <div>
+              <h3>它有没有留下可继续利用的资产？</h3>
+              <p>输出是否可读、可保存、可复查，会决定它是不是一次性的展示。</p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
