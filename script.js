@@ -4,9 +4,52 @@ document.querySelectorAll(".currentYear").forEach((node) => {
 
 document.documentElement.classList.add("js-enhanced");
 
+const root = document.documentElement;
+const body = document.body;
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const currentPage = document.body.dataset.page;
+const ensureGlobalMotionLayer = () => {
+  if (!body.querySelector(".scroll-progress")) {
+    const progressBar = document.createElement("div");
+    progressBar.className = "scroll-progress";
+    progressBar.setAttribute("aria-hidden", "true");
+    body.prepend(progressBar);
+  }
+
+  if (!prefersReducedMotion && !body.querySelector(".cursor-aura")) {
+    const cursorAura = document.createElement("div");
+    cursorAura.className = "cursor-aura";
+    cursorAura.setAttribute("aria-hidden", "true");
+    body.append(cursorAura);
+  }
+};
+
+ensureGlobalMotionLayer();
+
+const syncViewportState = () => {
+  const scrollRange = Math.max(root.scrollHeight - window.innerHeight, 0);
+  const progress = scrollRange > 0 ? window.scrollY / scrollRange : 0;
+
+  root.style.setProperty("--scroll-progress", progress.toFixed(4));
+};
+
+let viewportFrame = 0;
+const queueViewportSync = () => {
+  if (viewportFrame) {
+    return;
+  }
+
+  viewportFrame = window.requestAnimationFrame(() => {
+    syncViewportState();
+    viewportFrame = 0;
+  });
+};
+
+syncViewportState();
+window.addEventListener("scroll", queueViewportSync, { passive: true });
+window.addEventListener("resize", queueViewportSync);
+
+const currentPage = body.dataset.page;
 if (currentPage) {
   document.querySelectorAll("[data-nav]").forEach((link) => {
     if (link.dataset.nav === currentPage) {
@@ -68,22 +111,44 @@ if (prefersReducedMotion) {
 }
 
 if (!prefersReducedMotion) {
-  let pointerFrame = 0;
-  let pointerX = window.innerWidth * 0.5;
-  let pointerY = window.innerHeight * 0.3;
+  let pointerTargetX = window.innerWidth * 0.5;
+  let pointerTargetY = window.innerHeight * 0.3;
+  let pointerX = pointerTargetX;
+  let pointerY = pointerTargetY;
 
-  const syncPointer = () => {
-    document.body.style.setProperty("--pointer-x", `${pointerX}px`);
-    document.body.style.setProperty("--pointer-y", `${pointerY}px`);
-    pointerFrame = 0;
+  const renderPointer = () => {
+    pointerX += (pointerTargetX - pointerX) * 0.14;
+    pointerY += (pointerTargetY - pointerY) * 0.14;
+
+    root.style.setProperty("--pointer-x", `${pointerX}px`);
+    root.style.setProperty("--pointer-y", `${pointerY}px`);
+    root.style.setProperty("--cursor-x", `${pointerX}px`);
+    root.style.setProperty("--cursor-y", `${pointerY}px`);
+
+    window.requestAnimationFrame(renderPointer);
+  };
+
+  renderPointer();
+
+  const resetPointer = () => {
+    pointerTargetX = window.innerWidth * 0.5;
+    pointerTargetY = window.innerHeight * 0.3;
   };
 
   window.addEventListener("pointermove", (event) => {
-    pointerX = event.clientX;
-    pointerY = event.clientY;
+    pointerTargetX = event.clientX;
+    pointerTargetY = event.clientY;
+  });
 
-    if (!pointerFrame) {
-      pointerFrame = window.requestAnimationFrame(syncPointer);
+  window.addEventListener("pointerdown", (event) => {
+    pointerTargetX = event.clientX;
+    pointerTargetY = event.clientY;
+  });
+
+  window.addEventListener("blur", resetPointer);
+  window.addEventListener("mouseout", (event) => {
+    if (!event.relatedTarget) {
+      resetPointer();
     }
   });
 }
@@ -107,7 +172,7 @@ interactivePanels.forEach((panel) => {
     const offsetX = event.clientX - rect.left;
     const offsetY = event.clientY - rect.top;
     const rotateY = ((offsetX / rect.width) - 0.5) * 6;
-    const rotateX = ((0.5 - (offsetY / rect.height)) * 6);
+    const rotateX = (0.5 - (offsetY / rect.height)) * 6;
 
     panel.classList.add("is-hovered");
     panel.style.setProperty("--panel-tilt-x", `${rotateX.toFixed(2)}deg`);
