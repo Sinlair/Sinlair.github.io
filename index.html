@@ -5,171 +5,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Sinlair 的个人主页，集中展示 AI Agent、工作流系统与公开项目。"
+    content="Sinlair 的单页作品集，展示 AI Agent、工作流系统与公开项目。"
   >
   <meta name="theme-color" content="#f5f1e8">
-  <title>Sinlair | 首页</title>
+  <title>Sinlair | Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body data-page="home">
+<body data-page="single">
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="./index.html">SINLAIR</a>
-      <div class="header-rail">
-        <nav class="site-nav" aria-label="主导航">
-          <a href="./index.html" data-nav="home">首页</a>
-          <a href="./about.html" data-nav="about">关于</a>
-          <a href="./projects.html" data-nav="projects">项目</a>
-          <a href="./contact.html" data-nav="contact">联系</a>
-        </nav>
-        <a class="header-link" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
+      <nav class="site-nav" aria-label="主导航">
+        <button class="nav-tab" type="button" data-view-trigger="overview">Overview</button>
+        <button class="nav-tab" type="button" data-view-trigger="projects">Projects</button>
+        <button class="nav-tab" type="button" data-view-trigger="approach">Approach</button>
+        <button class="nav-tab" type="button" data-view-trigger="links">Links</button>
+      </nav>
+      <a class="header-link" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
     </header>
 
-    <main class="page-main">
-      <section class="hero section reveal">
-        <div class="hero-copy">
-          <p class="section-kicker">Portfolio / AI Agent / Workflow Systems</p>
-          <h1>把 AI Agent 和工作流系统做成可读、可用、可公开的作品。</h1>
-          <p class="hero-lead">
-            我用 <strong>Sinlair</strong> 这个名字持续公开做项目。这里不只是入口页，
-            也是我整理方向、项目与表达方式的一张首页。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./projects.html">查看项目</a>
-            <a class="button button-secondary" href="./about.html">了解方法</a>
-          </div>
+    <main class="workspace">
+      <section class="identity-pane staged">
+        <p class="section-kicker">Student Developer / AI Agent Builder</p>
+        <h1>一个不靠滚动，而靠结构说清楚的作品页。</h1>
+        <p class="identity-lead">
+          我用 <strong>Sinlair</strong> 这个名字持续公开做项目，关注 AI Agent、工作流系统、
+          local-first runtime，以及如何把项目写得更容易被读懂。
+        </p>
+
+        <div class="hero-actions">
+          <button class="button button-primary" type="button" data-view-trigger="projects">看项目</button>
+          <button class="button button-secondary" type="button" data-view-trigger="approach">看方法</button>
         </div>
 
-        <aside class="hero-summary">
-          <div class="summary-card">
-            <span class="meta-label">当前关注</span>
+        <div class="summary-stack">
+          <article class="summary-card">
+            <span class="meta-label">当前主线</span>
             <h2>状态可见的 Agent 系统</h2>
-            <p>我更关心任务如何被组织、过程如何被看见，以及结果能否沉淀下来。</p>
-          </div>
-          <div class="meta-list">
-            <div>
+            <p>我更关注任务如何被组织、过程如何被看见，以及结果能否沉淀下来。</p>
+          </article>
+
+          <div class="summary-grid">
+            <article class="mini-card">
               <span class="meta-label">代表项目</span>
               <p>ReAgent / TravelAgent</p>
-            </div>
-            <div>
+            </article>
+            <article class="mini-card">
               <span class="meta-label">表达偏好</span>
               <p>先讲作用，再讲实现。</p>
-            </div>
-            <div>
+            </article>
+            <article class="mini-card">
               <span class="meta-label">公开方式</span>
-              <p>主页、项目页和仓库说明保持同一条阅读路径。</p>
-            </div>
+              <p>主页、仓库、文档保持同一条阅读路径。</p>
+            </article>
           </div>
-        </aside>
-      </section>
-
-      <section class="section reveal">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">Selected Work</p>
-            <h2>两个项目，分别对应两种视角。</h2>
-          </div>
-          <a class="section-link" href="./projects.html">项目总览</a>
-        </div>
-
-        <div class="card-grid card-grid-two">
-          <article class="content-card project-card">
-            <div class="card-topline">01 / Runtime</div>
-            <h3>ReAgent</h3>
-            <p>
-              一个本地优先的研究工作流运行时，用来承载长生命周期任务、记忆和可复用输出。
-            </p>
-            <ul class="plain-list">
-              <li>强调状态可见，不把流程藏进黑盒。</li>
-              <li>让结果可以长期保留，而不是一次性展示。</li>
-              <li>把 research、memory 和 runtime 放进统一结构里。</li>
-            </ul>
-            <div class="tag-row">
-              <span>Node.js</span>
-              <span>TypeScript</span>
-              <span>CLI Runtime</span>
-            </div>
-            <a class="section-link" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
-
-          <article class="content-card project-card">
-            <div class="card-topline">02 / Product</div>
-            <h3>TravelAgent</h3>
-            <p>
-              一个围绕旅行规划场景构建的多步骤工作台，把自由输入转成更接近真实可执行的方案。
-            </p>
-            <ul class="plain-list">
-              <li>通过多角色路由，把能力组织成完整工作流。</li>
-              <li>结合地图能力做 grounded enrichment。</li>
-              <li>在界面上呈现从输入到方案的连续过程。</li>
-            </ul>
-            <div class="tag-row">
-              <span>Java 21</span>
-              <span>Vue 3</span>
-              <span>Spring AI</span>
-            </div>
-            <a class="section-link" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
         </div>
       </section>
 
-      <section class="section reveal">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">Approach</p>
-            <h2>我希望别人进入一个项目时，先看到清晰的问题定义。</h2>
-          </div>
-        </div>
+      <section class="view-pane staged">
+        <div class="view-frame">
+          <section class="view-panel" data-view-panel="overview" aria-label="Overview">
+            <div class="panel-head">
+              <div>
+                <p class="section-kicker">Overview</p>
+                <h2>我把主页压成四个你真正需要的入口。</h2>
+              </div>
+            </div>
 
-        <div class="card-grid card-grid-three">
-          <article class="content-card">
-            <h3>先把目标说清楚</h3>
-            <p>每个项目都应该先被一句话理解，再决定是否继续深入阅读。</p>
-          </article>
-          <article class="content-card">
-            <h3>再把过程保留下来</h3>
-            <p>系统如何组织任务、状态如何流动、输出如何沉淀，本身就是作品的一部分。</p>
-          </article>
-          <article class="content-card">
-            <h3>最后把表达也做好</h3>
-            <p>主页、项目页和仓库说明应该互相补充，而不是让读者自己拼上下文。</p>
-          </article>
-        </div>
-      </section>
+            <div class="card-grid card-grid-two">
+              <article class="content-card">
+                <span class="meta-label">Projects</span>
+                <h3>两条主线</h3>
+                <p>ReAgent 代表运行时视角，TravelAgent 代表产品化视角。</p>
+              </article>
+              <article class="content-card">
+                <span class="meta-label">Approach</span>
+                <h3>先解释问题</h3>
+                <p>我希望读者先知道项目在解决什么，再决定是否进入源码。</p>
+              </article>
+              <article class="content-card">
+                <span class="meta-label">Signals</span>
+                <h3>Visible state</h3>
+                <p>系统边界、任务流、持久输出，比一次性结果更重要。</p>
+              </article>
+              <article class="content-card">
+                <span class="meta-label">Links</span>
+                <h3>继续往下看</h3>
+                <p>GitHub、项目页和仓库入口都已经收在同一张页面里。</p>
+              </article>
+            </div>
+          </section>
 
-      <section class="section section-slim reveal">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">Entry Points</p>
-            <h2>如果你想继续看，可以从这些地方开始。</h2>
-          </div>
-        </div>
+          <section class="view-panel" data-view-panel="projects" aria-label="Projects">
+            <div class="panel-head">
+              <div>
+                <p class="section-kicker">Projects</p>
+                <h2>两个项目，分别对应两种系统视角。</h2>
+              </div>
+            </div>
 
-        <div class="link-list">
-          <a class="link-row" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            <strong>全部公开项目与提交轨迹</strong>
-          </a>
-          <a class="link-row" href="./projects.html">
-            <span>Projects</span>
-            <strong>先看项目作用、结构和亮点</strong>
-          </a>
-          <a class="link-row" href="./about.html">
-            <span>About</span>
-            <strong>了解我的方法与长期方向</strong>
-          </a>
-          <a class="link-row" href="./contact.html">
-            <span>Contact</span>
-            <strong>按主题进入具体仓库</strong>
-          </a>
+            <div class="project-stack">
+              <article class="content-card project-card">
+                <div class="card-topline">01 / Runtime</div>
+                <h3>ReAgent</h3>
+                <p>一个本地优先的研究工作流运行时，用来承载长生命周期任务、记忆和可复用输出。</p>
+                <ul class="plain-list">
+                  <li>强调状态可见，不把流程藏进黑盒。</li>
+                  <li>让结果可以长期保留，而不是一次性展示。</li>
+                  <li>把 research、memory 和 runtime 放进统一结构里。</li>
+                </ul>
+                <a class="section-link" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">打开仓库</a>
+              </article>
+
+              <article class="content-card project-card">
+                <div class="card-topline">02 / Product</div>
+                <h3>TravelAgent</h3>
+                <p>一个围绕旅行规划场景构建的多步骤工作台，把自由输入转成更接近真实可执行的方案。</p>
+                <ul class="plain-list">
+                  <li>通过多角色路由，把能力组织成完整工作流。</li>
+                  <li>结合地图能力做 grounded enrichment。</li>
+                  <li>在界面上呈现从输入到方案的连续过程。</li>
+                </ul>
+                <a class="section-link" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">打开仓库</a>
+              </article>
+            </div>
+          </section>
+
+          <section class="view-panel" data-view-panel="approach" aria-label="Approach">
+            <div class="panel-head">
+              <div>
+                <p class="section-kicker">Approach</p>
+                <h2>我判断一个项目是否成立，通常看这三件事。</h2>
+              </div>
+            </div>
+
+            <div class="stack-list">
+              <article class="stack-item">
+                <span class="stack-index">01</span>
+                <div>
+                  <h3>问题定义是否清楚</h3>
+                  <p>如果问题本身说不明白，后面的实现通常也很难形成真正的结构。</p>
+                </div>
+              </article>
+              <article class="stack-item">
+                <span class="stack-index">02</span>
+                <div>
+                  <h3>系统边界能不能被读出来</h3>
+                  <p>我更喜欢能解释任务流、状态和工具关系的项目，而不是只给结果。</p>
+                </div>
+              </article>
+              <article class="stack-item">
+                <span class="stack-index">03</span>
+                <div>
+                  <h3>有没有留下可继续利用的资产</h3>
+                  <p>输出是否可读、可保存、可复查，会决定它是不是一次性的展示。</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view-panel" data-view-panel="links" aria-label="Links">
+            <div class="panel-head">
+              <div>
+                <p class="section-kicker">Links</p>
+                <h2>如果你想继续往下看，就从这些地方进入。</h2>
+              </div>
+            </div>
+
+            <div class="link-list">
+              <a class="link-row" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">
+                <span>GitHub</span>
+                <strong>全部公开项目、提交记录和持续中的工作</strong>
+              </a>
+              <a class="link-row" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">
+                <span>ReAgent</span>
+                <strong>从运行时、编排和研究工作流进入</strong>
+              </a>
+              <a class="link-row" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">
+                <span>TravelAgent</span>
+                <strong>从产品化界面和面向用户的流程进入</strong>
+              </a>
+              <a class="link-row" href="https://sinlair.github.io/" target="_blank" rel="noreferrer">
+                <span>Site</span>
+                <strong>主页本身也是作品表达的一部分</strong>
+              </a>
+            </div>
+          </section>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span class="currentYear"></span> Sinlair. Built with GitHub Pages.</p>
+      <p>&copy; <span class="currentYear"></span> Sinlair</p>
     </footer>
   </div>
 
