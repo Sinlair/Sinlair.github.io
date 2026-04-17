@@ -569,3 +569,22 @@ button:focus-visible {
     flex-direction: column;
   }
 }
+
+/* ============================================================
+   Ripple click effect
+   ============================================================ */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-out 580ms ease-out forwards;
+  background: rgba(255, 255, 255, 0.36);
+  pointer-events: none;
+}
+
+@keyframes ripple-out {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
