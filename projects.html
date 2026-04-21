@@ -2,11 +2,96 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Redirecting to Sinlair portfolio projects section.">
   <meta http-equiv="refresh" content="0; url=./index.html#projects">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sinlair | Projects Redirect</title>
+  <meta name="theme-color" content="#eef5ef">
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <title>Sinlair | Redirecting to Projects</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #eef5ef;
+      --surface: rgba(255, 255, 255, 0.82);
+      --text: #122018;
+      --muted: #55635b;
+      --accent: #245242;
+      --line: rgba(18, 32, 24, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      color: var(--text);
+      font-family: "Noto Sans SC", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(121, 168, 136, 0.26), transparent 24%),
+        linear-gradient(180deg, #f7fbf7 0%, var(--bg) 100%);
+    }
+
+    main {
+      width: min(32rem, 100%);
+      padding: 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      background: var(--surface);
+      box-shadow: 0 20px 48px rgba(18, 32, 24, 0.1);
+    }
+
+    p {
+      margin: 0 0 0.9rem;
+      line-height: 1.7;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.7rem, 5vw, 2.3rem);
+      line-height: 1.1;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      padding: 0 1rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #173327 0%, #2f6451 100%);
+      color: #f7fbf7;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    window.location.replace("./index.html#projects");
+  </script>
 </head>
 <body>
-  <p>Redirecting to <a href="./index.html#projects">Projects</a>...</p>
+  <main>
+    <p class="eyebrow">Sinlair / Redirect</p>
+    <h1>Redirecting to the Projects section.</h1>
+    <p class="muted">This route is kept for compatibility and now points to the one-screen homepage.</p>
+    <p><a class="link" href="./index.html#projects">Open Projects</a></p>
+  </main>
 </body>
 </html>

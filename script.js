@@ -6,6 +6,8 @@ document.querySelectorAll(".currentYear").forEach((node) => {
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const stagedNodes = document.querySelectorAll(".staged");
+const body = document.body;
+const viewHeading = document.querySelector(".view-heading");
 
 if (prefersReducedMotion) {
   stagedNodes.forEach((node) => {
@@ -24,9 +26,21 @@ if (prefersReducedMotion) {
 const triggers = document.querySelectorAll("[data-view-trigger]");
 const panels = document.querySelectorAll("[data-view-panel]");
 const validViews = new Set(["overview", "projects", "approach", "links"]);
+const viewLabels = {
+  overview: "Overview",
+  projects: "Projects",
+  approach: "Approach",
+  links: "Links",
+};
 
 const setView = (view, syncHash = true) => {
   const nextView = validViews.has(view) ? view : "overview";
+
+  body.dataset.activeView = nextView;
+
+  if (viewHeading) {
+    viewHeading.textContent = viewLabels[nextView];
+  }
 
   triggers.forEach((trigger) => {
     const isCurrent = trigger.dataset.viewTrigger === nextView;
@@ -37,11 +51,12 @@ const setView = (view, syncHash = true) => {
   panels.forEach((panel) => {
     const isCurrent = panel.dataset.viewPanel === nextView;
     panel.classList.toggle("is-active", isCurrent);
+    panel.setAttribute("aria-hidden", String(!isCurrent));
   });
 
   if (syncHash) {
     const nextHash = nextView === "overview" ? "" : `#${nextView}`;
-    const nextUrl = `${window.location.pathname}${nextHash}`;
+    const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`;
     window.history.replaceState(null, "", nextUrl);
   }
 };

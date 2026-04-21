@@ -7,92 +7,161 @@
     name="description"
     content="Sinlair 的单页作品集，展示 AI Agent、工作流系统与公开项目。"
   >
-  <meta name="theme-color" content="#f5f1e8">
+  <meta name="theme-color" content="#eef5ef">
   <title>Sinlair | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body data-page="single">
+<body data-page="single" data-active-view="overview">
+  <div class="page-glow page-glow-one" aria-hidden="true"></div>
+  <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="./index.html">SINLAIR</a>
+      <a class="brand" href="./index.html" aria-label="Sinlair home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>SINLAIR</strong>
+          <small>portfolio / systems</small>
+        </span>
+      </a>
+
       <nav class="site-nav" aria-label="主导航">
-        <button class="nav-tab" type="button" data-view-trigger="overview">Overview</button>
-        <button class="nav-tab" type="button" data-view-trigger="projects">Projects</button>
-        <button class="nav-tab" type="button" data-view-trigger="approach">Approach</button>
-        <button class="nav-tab" type="button" data-view-trigger="links">Links</button>
+        <button class="nav-tab is-current" type="button" data-view-trigger="overview" aria-pressed="true">Overview</button>
+        <button class="nav-tab" type="button" data-view-trigger="projects" aria-pressed="false">Projects</button>
+        <button class="nav-tab" type="button" data-view-trigger="approach" aria-pressed="false">Approach</button>
+        <button class="nav-tab" type="button" data-view-trigger="links" aria-pressed="false">Links</button>
       </nav>
-      <a class="header-link" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub</a>
+
+      <a class="header-link" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">GitHub ↗</a>
     </header>
 
     <main class="workspace">
       <section class="identity-pane staged">
-        <p class="section-kicker">Student Developer / AI Agent Builder</p>
-        <h1>一个不靠滚动，而靠结构说清楚的作品页。</h1>
-        <p class="identity-lead">
-          我用 <strong>Sinlair</strong> 这个名字持续公开做项目，关注 AI Agent、工作流系统、
-          local-first runtime，以及如何把项目写得更容易被读懂。
-        </p>
+        <div class="identity-topbar">
+          <p class="section-kicker">Student Developer / AI Agent Builder</p>
+          <p class="status-pill"><span class="status-dot" aria-hidden="true"></span>Building visible systems</p>
+        </div>
+
+        <div class="hero-copy">
+          <h1>把 AI 项目做成<span>一眼能感受到结构</span>的界面。</h1>
+          <p class="identity-lead">
+            我用 <strong>Sinlair</strong> 这个名字持续公开做项目，关注 AI Agent、工作流系统、
+            local-first runtime，以及如何把复杂系统讲得更直观、更可进入。
+          </p>
+        </div>
 
         <div class="hero-actions">
           <button class="button button-primary" type="button" data-view-trigger="projects">看项目</button>
           <button class="button button-secondary" type="button" data-view-trigger="approach">看方法</button>
         </div>
 
-        <div class="summary-stack">
-          <article class="summary-card">
-            <span class="meta-label">当前主线</span>
-            <h2>状态可见的 Agent 系统</h2>
-            <p>我更关注任务如何被组织、过程如何被看见，以及结果能否沉淀下来。</p>
+        <div class="signal-grid">
+          <article class="signal-card">
+            <span class="meta-label">Focus</span>
+            <strong>Agent Runtime</strong>
+            <p>把任务流、记忆和结果沉淀到同一套结构里。</p>
           </article>
-
-          <div class="summary-grid">
-            <article class="mini-card">
-              <span class="meta-label">代表项目</span>
-              <p>ReAgent / TravelAgent</p>
-            </article>
-            <article class="mini-card">
-              <span class="meta-label">表达偏好</span>
-              <p>先讲作用，再讲实现。</p>
-            </article>
-            <article class="mini-card">
-              <span class="meta-label">公开方式</span>
-              <p>主页、仓库、文档保持同一条阅读路径。</p>
-            </article>
-          </div>
+          <article class="signal-card">
+            <span class="meta-label">Output</span>
+            <strong>Visible State</strong>
+            <p>不只展示结论，也把系统边界和过程打开给人看。</p>
+          </article>
+          <article class="signal-card">
+            <span class="meta-label">Reading Path</span>
+            <strong>One-Screen Entry</strong>
+            <p>把理解路径压缩成一屏，而不是把内容摊成长卷。</p>
+          </article>
         </div>
+
+        <article class="spotlight-card">
+          <div class="spotlight-head">
+            <div>
+              <p class="meta-label meta-label-invert">Current Focus</p>
+              <h2>过程感本身也应该被设计出来。</h2>
+            </div>
+            <span class="spotlight-badge">Live</span>
+          </div>
+
+          <p class="spotlight-copy">
+            我更关心一套系统怎样公开自己的边界、状态和节奏，而不是只把结论端出来。
+          </p>
+
+          <div class="spotlight-metrics">
+            <div class="metric-chip">
+              <span class="metric-value">02</span>
+              <span class="metric-label">flagship builds</span>
+            </div>
+            <div class="metric-chip">
+              <span class="metric-value">04</span>
+              <span class="metric-label">entry panels</span>
+            </div>
+            <div class="metric-chip">
+              <span class="metric-value">24/7</span>
+              <span class="metric-label">public iteration</span>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="view-pane staged">
+        <div class="view-hud">
+          <div>
+            <p class="section-kicker">Interface Map</p>
+            <p class="view-heading">Overview</p>
+          </div>
+          <div class="view-progress" aria-hidden="true">
+            <span class="view-progress-fill"></span>
+          </div>
+        </div>
+
         <div class="view-frame">
-          <section class="view-panel" data-view-panel="overview" aria-label="Overview">
+          <section class="view-panel is-active" data-view-panel="overview" aria-label="Overview">
             <div class="panel-head">
               <div>
                 <p class="section-kicker">Overview</p>
-                <h2>我把主页压成四个你真正需要的入口。</h2>
+                <h2>我把主页压成四个真正有效的入口。</h2>
               </div>
+              <p class="panel-note">不做长滚动，把理解路径收敛到一屏内。</p>
             </div>
 
             <div class="card-grid card-grid-two">
-              <article class="content-card">
-                <span class="meta-label">Projects</span>
-                <h3>两条主线</h3>
-                <p>ReAgent 代表运行时视角，TravelAgent 代表产品化视角。</p>
+              <article class="content-card content-card-featured">
+                <span class="meta-label meta-label-invert">Projects + Approach</span>
+                <h3>两条主线，一个判断标准</h3>
+                <p>
+                  ReAgent 负责回答“系统怎样运行”，TravelAgent 负责回答“体验怎样落地”。
+                  我更在意的是，它们是否都把过程解释清楚。
+                </p>
+                <div class="inline-tags">
+                  <span>runtime-first</span>
+                  <span>product-shaped</span>
+                  <span>visible state</span>
+                </div>
               </article>
-              <article class="content-card">
-                <span class="meta-label">Approach</span>
-                <h3>先解释问题</h3>
-                <p>我希望读者先知道项目在解决什么，再决定是否进入源码。</p>
-              </article>
+
               <article class="content-card">
                 <span class="meta-label">Signals</span>
-                <h3>Visible state</h3>
-                <p>系统边界、任务流、持久输出，比一次性结果更重要。</p>
+                <h3>先看结构，再看功能</h3>
+                <p>系统边界、任务流和持久输出，比一次性的 demo 更重要。</p>
               </article>
+
               <article class="content-card">
-                <span class="meta-label">Links</span>
-                <h3>继续往下看</h3>
-                <p>GitHub、项目页和仓库入口都已经收在同一张页面里。</p>
+                <span class="meta-label">Writing</span>
+                <h3>公开表达也算功能的一部分</h3>
+                <p>主页、仓库和项目说明尽量保持同一条叙事路径，不让上下文断掉。</p>
+              </article>
+
+              <article class="content-card">
+                <span class="meta-label">Entry</span>
+                <h3>从一个入口进去，再决定要不要下钻</h3>
+                <p>你可以先从四个 tab 判断方向，再决定是否进入代码和文档。</p>
               </article>
             </div>
           </section>
@@ -103,11 +172,12 @@
                 <p class="section-kicker">Projects</p>
                 <h2>两个项目，分别对应两种系统视角。</h2>
               </div>
+              <p class="panel-note">一个偏运行时，一个偏产品化，但都强调状态和路径。</p>
             </div>
 
             <div class="project-stack">
-              <article class="content-card project-card">
-                <div class="card-topline">01 / Runtime</div>
+              <article class="content-card project-card project-card-runtime" data-project-index="01">
+                <div class="card-topline">Runtime System</div>
                 <h3>ReAgent</h3>
                 <p>一个本地优先的研究工作流运行时，用来承载长生命周期任务、记忆和可复用输出。</p>
                 <ul class="plain-list">
@@ -115,11 +185,11 @@
                   <li>让结果可以长期保留，而不是一次性展示。</li>
                   <li>把 research、memory 和 runtime 放进统一结构里。</li>
                 </ul>
-                <a class="section-link" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">打开仓库</a>
+                <a class="section-link" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">打开仓库 ↗</a>
               </article>
 
-              <article class="content-card project-card">
-                <div class="card-topline">02 / Product</div>
+              <article class="content-card project-card project-card-product" data-project-index="02">
+                <div class="card-topline">Product Workflow</div>
                 <h3>TravelAgent</h3>
                 <p>一个围绕旅行规划场景构建的多步骤工作台，把自由输入转成更接近真实可执行的方案。</p>
                 <ul class="plain-list">
@@ -127,7 +197,7 @@
                   <li>结合地图能力做 grounded enrichment。</li>
                   <li>在界面上呈现从输入到方案的连续过程。</li>
                 </ul>
-                <a class="section-link" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">打开仓库</a>
+                <a class="section-link" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">打开仓库 ↗</a>
               </article>
             </div>
           </section>
@@ -138,6 +208,7 @@
                 <p class="section-kicker">Approach</p>
                 <h2>我判断一个项目是否成立，通常看这三件事。</h2>
               </div>
+              <p class="panel-note">先看问题有没有被定义清楚，再看实现有没有留下可复用资产。</p>
             </div>
 
             <div class="stack-list">
@@ -148,6 +219,7 @@
                   <p>如果问题本身说不明白，后面的实现通常也很难形成真正的结构。</p>
                 </div>
               </article>
+
               <article class="stack-item">
                 <span class="stack-index">02</span>
                 <div>
@@ -155,6 +227,7 @@
                   <p>我更喜欢能解释任务流、状态和工具关系的项目，而不是只给结果。</p>
                 </div>
               </article>
+
               <article class="stack-item">
                 <span class="stack-index">03</span>
                 <div>
@@ -171,24 +244,32 @@
                 <p class="section-kicker">Links</p>
                 <h2>如果你想继续往下看，就从这些地方进入。</h2>
               </div>
+              <p class="panel-note">每个入口都尽量对应一种阅读目的，而不是简单堆链接。</p>
             </div>
 
             <div class="link-list">
               <a class="link-row" href="https://github.com/Sinlair" target="_blank" rel="noreferrer">
-                <span>GitHub</span>
+                <span class="link-label">GitHub</span>
                 <strong>全部公开项目、提交记录和持续中的工作</strong>
+                <span class="link-arrow" aria-hidden="true">↗</span>
               </a>
+
               <a class="link-row" href="https://github.com/Sinlair/reagent" target="_blank" rel="noreferrer">
-                <span>ReAgent</span>
+                <span class="link-label">ReAgent</span>
                 <strong>从运行时、编排和研究工作流进入</strong>
+                <span class="link-arrow" aria-hidden="true">↗</span>
               </a>
+
               <a class="link-row" href="https://github.com/Sinlair/TravelAgent" target="_blank" rel="noreferrer">
-                <span>TravelAgent</span>
+                <span class="link-label">TravelAgent</span>
                 <strong>从产品化界面和面向用户的流程进入</strong>
+                <span class="link-arrow" aria-hidden="true">↗</span>
               </a>
+
               <a class="link-row" href="https://sinlair.github.io/" target="_blank" rel="noreferrer">
-                <span>Site</span>
+                <span class="link-label">Site</span>
                 <strong>主页本身也是作品表达的一部分</strong>
+                <span class="link-arrow" aria-hidden="true">↗</span>
               </a>
             </div>
           </section>
@@ -198,6 +279,7 @@
 
     <footer class="site-footer">
       <p>&copy; <span class="currentYear"></span> Sinlair</p>
+      <p>Built for one-screen reading.</p>
     </footer>
   </div>
 
